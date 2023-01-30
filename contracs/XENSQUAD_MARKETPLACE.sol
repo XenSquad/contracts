@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 //https://github.com/oasis-nft/oasis-contracts/blob/master/contracts/NFTEXV3.sol
 
 
-contract MARKETPLACE is ERC721Holder, Ownable {
+contract XENSQUAD_MARKETPLACE is ERC721Holder, Ownable {
 
   struct Order {
     uint8 orderType;  //0:Fixed Price, 1:Dutch Auction, 2:English Auction
