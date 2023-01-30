@@ -135,12 +135,12 @@ contract NFTEXV3 is ERC721Holder, Ownable {
   }
 
   // take order fx
-  // you have to pay only BCH for bidding and buying.
+  // you have to pay only XN for bidding and buying.
 
   // In this contract, since send function is used instead of transfer or low-level call function,
   // if a participant is a contract, it must have receive payable function.
-  // But if it has some code in either receive or fallback fx, they might not be able to receive their BCH.
-  // Even though some contracts can't receive their BCH, the transaction won't be failed.
+  // But if it has some code in either receive or fallback fx, they might not be able to receive their XN.
+  // Even though some contracts can't receive their XN, the transaction won't be failed.
 
   // Bids must be at least 5% higher than the previous bid.
   // If someone bids in the last 5 minutes of an auction, the auction will automatically extend by 5 minutes.
@@ -161,8 +161,8 @@ contract NFTEXV3 is ERC721Holder, Ownable {
       require(msg.value >= o.startPrice && msg.value > 0, "low price bid");
     }
 
-    if (block.number > endBlock - 150) {  // 150 blocks = 5 mins on dogechain.
-      o.endBlock = endBlock + 150;
+    if (block.number > endBlock - 300) {  // 300 blocks = 5 mins on X1.
+      o.endBlock = endBlock + 300;
     }
 
     o.lastBidder = msg.sender;
