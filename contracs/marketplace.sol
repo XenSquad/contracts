@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 //https://github.com/TheGreatHB/NFTEX/blob/main/contracts/NFTEX.sol
 
 
-contract NFTEXV3 is ERC721Holder, Ownable {
+contract MARKETPLACE is ERC721Holder, Ownable {
 
   struct Order {
     uint8 orderType;  //0:Fixed Price, 1:Dutch Auction, 2:English Auction
