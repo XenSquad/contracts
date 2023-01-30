@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-//https://github.com/TheGreatHB/NFTEX/blob/main/contracts/NFTEX.sol
+//https://github.com/oasis-nft/oasis-contracts/blob/master/contracts/NFTEXV3.sol
 
 
 contract MARKETPLACE is ERC721Holder, Ownable {
